@@ -3,12 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FavoriteMoviesComponent } from './favorite-movies/favorite-movies.component';
-import { CounterComponent } from './counter/counter.component';
-import { HomeComponent } from './home/home.component';
-import { ServiceCounterComponent } from './service-counter/service-counter.component';
-import { SignupFormComponent } from './signup-form/signup-form.component';
-import { ControlErrorsComponent } from './control-errors/control-errors.component';
+import { FavoriteMoviesComponent } from './components/favorite-movies/favorite-movies.component';
+import { CounterComponent } from './components/counter/counter.component';
+import { HomeComponent } from './components/home/home.component';
+import { ServiceCounterComponent } from './components/service-counter/service-counter.component';
+import { SignupFormComponent } from './components/signup-form/signup-form.component';
+import { ControlErrorsComponent } from './components/control-errors/control-errors.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ErrorMessageDirective } from './directives/error-message.directive';
 import { HttpClientModule } from '@angular/common/http';

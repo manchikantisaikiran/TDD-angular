@@ -1,4 +1,4 @@
-import { SignupData } from '../services/signup.service';
+import { SignupData } from '../../services/signup.service';
 import { DebugElement } from '@angular/core';
 import { ComponentFixture, fakeAsync, TestBed, tick } from '@angular/core/testing';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -12,7 +12,7 @@ import {
   findEl,
   checkField,
   setFieldValue,
-} from '../spec-helpers/element-spec-helper';
+} from '../../spec-helpers/element-spec-helper';
 import { SignupFormComponent } from './signup-form.component';
 import { ControlErrorsComponent } from '../control-errors/control-errors.component';
 
@@ -108,6 +108,7 @@ describe('SignupFormComponent', () => {
     await setup();
 
     fillForm();
+    
     fixture.detectChanges();
 
     expect(findEl(fixture, 'submit').properties.disabled).toBe(true);

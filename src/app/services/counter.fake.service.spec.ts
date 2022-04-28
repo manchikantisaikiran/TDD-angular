@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { BehaviorSubject, Observable, of } from 'rxjs';
-import { ServiceCounterComponent } from '../service-counter/service-counter.component';
+import { ServiceCounterComponent } from '../components/service-counter/service-counter.component';
 import {
   expectText,
   click,

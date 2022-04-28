@@ -2,7 +2,7 @@ import { DebugElement } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { of } from 'rxjs';
-import { FavoriteMoviesService } from '../services/favorite-movies-service.service';
+import { FavoriteMoviesService } from '../../services/favorite-movies-service.service';
 
 import { FavoriteMoviesComponent } from './favorite-movies.component';
 import { favoriteMovies } from './favoritemovies';

@@ -6,7 +6,7 @@ import {
   expectContent,
   findEl,
   setFieldElementValue,
-} from '../spec-helpers/element-spec-helper';
+} from '../../spec-helpers/element-spec-helper';
 
 import { ControlErrorsComponent } from './control-errors.component';
 

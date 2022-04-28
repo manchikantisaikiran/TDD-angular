@@ -93,17 +93,25 @@ describe('FlickrService', () => {
     controller = TestBed.inject(HttpTestingController);
   });
 
+  // Verify that all requests have been answered
   afterEach(() => {
     controller.verify();
   });
 
   it('searches for public photos', () => {
     let actualPhotos: Photo[] | undefined;
+    //Call the method under test that sends HTTP requests
     flickrService.searchPublicPhotos(searchTerm).subscribe((otherPhotos) => {
       actualPhotos = otherPhotos;
     });
 
-    controller.expectOne(expectedUrl).flush({ photos: { photo: photos } });
+    // Find pending requests
+    const request = controller.expectOne(expectedUrl)
+    
+    //Respond to these requests with fake data
+    request.flush({ photos: { photo: photos } });
+  
+    //Check the result of the method call
     expect(actualPhotos).toEqual(photos);
   });
 

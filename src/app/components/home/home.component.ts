@@ -15,5 +15,4 @@ export class HomeComponent implements OnInit {
   handleCountChange(count: number): void {
     console.log('countChange event from CounterComponent', count);
   }
-
 }
