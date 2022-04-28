@@ -1,0 +1,9 @@
+<div class="container">
+    <app-counter [startCount]="6" (countChange)="handleCountChange($event)"></app-counter>
+    <app-counter [startCount]="100" (countChange)="handleCountChange($event)"></app-counter>
+</div>
+
+<div class="container">
+    <app-service-counter></app-service-counter>
+    <app-service-counter></app-service-counter>
+</div>
