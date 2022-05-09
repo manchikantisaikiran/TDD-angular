@@ -16,6 +16,14 @@
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
+      "i18n": {
+        "sourceLocale": "en-US",
+        "locales": {
+          "hn": {
+            "translation": "src/locale/messages.hindi.xlf"
+          }
+        }
+      },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -64,6 +72,9 @@
               "extractLicenses": false,
               "sourceMap": true,
               "namedChunks": true
+            },
+            "hn": {
+              "localize": ["hn"]
             }
           },
           "defaultConfiguration": "production"
@@ -76,6 +87,9 @@
             },
             "development": {
               "browserTarget": "angular-TDD:build:development"
+            },
+            "hn": {
+              "browserTarget": "angular-TDD:build:hn"
             }
           },
           "defaultConfiguration": "development"
