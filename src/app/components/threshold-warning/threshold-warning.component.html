@@ -1,0 +1,29 @@
+<div  style="margin-top:1rem;">
+    <input type="number" [appThresholdWarning]="10" data-testid="input" />
+</div>
+
+<!-- <ng-template appPaginate [appPaginateOf]="items" [appPaginatePerPage]="perPage" [appPaginateControls]="controls"></ng-template> -->
+
+<div>
+    <ul>
+        <li *appPaginate="let item of items; perPage: 3; controls: controls" data-testid="item">
+            {{ item }}
+        </li>
+    </ul>
+</div>
+
+<ng-template #controls let-previousPage="previousPage" let-page="page" let-pages="pages" let-nextPage="nextPage">
+    <div style="margin-top:1rem;">
+        <span data-testid="page">{{ page }}</span>
+        /
+        <span data-testid="pages">{{ pages }}</span>
+    </div>
+    <div>
+        <button (click)="previousPage()" data-testid="previousPage">
+            Previous page
+        </button>
+        <button (click)="nextPage()" data-testid="nextPage">
+            Next page
+        </button>
+    </div>
+</ng-template>

@@ -12,6 +12,12 @@ import { ControlErrorsComponent } from './components/control-errors/control-erro
 import { ReactiveFormsModule } from '@angular/forms';
 import { ErrorMessageDirective } from './directives/error-message.directive';
 import { HttpClientModule } from '@angular/common/http';
+import { ThresholdWarningDirective } from './directives/threshold-warning.directive';
+import { ThresholdWarningComponent } from './components/threshold-warning/threshold-warning.component';
+import { AppPaginateDirective } from './directives/app-paginate.directive';
+import { TranslatePipe } from './pipes/transalte.pipe';
+import { TranslateComponent } from './components/translate/translate.component';
+import { TranslateService } from './services/translate.service';
 
 @NgModule({
   declarations: [
@@ -22,7 +28,13 @@ import { HttpClientModule } from '@angular/common/http';
     ServiceCounterComponent,
     SignupFormComponent,
     ControlErrorsComponent,
-    ErrorMessageDirective
+    ErrorMessageDirective,
+    ThresholdWarningComponent,
+    ThresholdWarningDirective,
+    AppPaginateDirective,
+    TranslatePipe,
+    TranslateComponent,
+    // SquarePipe
   ],
   imports: [
     BrowserModule,
@@ -30,7 +42,7 @@ import { HttpClientModule } from '@angular/common/http';
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [TranslateService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
