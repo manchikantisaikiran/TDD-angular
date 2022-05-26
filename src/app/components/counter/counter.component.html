@@ -13,3 +13,7 @@
   <input type="number" #resetInput data-testid="reset-input" />
   <button (click)="reset(resetInput.value)" data-testid="reset-button" i18n>Reset</button>
 </p>
+
+<!-- {{randomNumber}} -->
+
+<span i18n>Updated {minutes, plural, =0 {just now} =1 {one minute ago} other {{{minutes}} minutes ago}}</span>

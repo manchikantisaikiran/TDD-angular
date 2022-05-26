@@ -7,6 +7,8 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 })
 export class CounterComponent implements OnInit {
 
+  minutes = 2
+
   @Input() startCount = 0;
 
   @Output() countChange = new EventEmitter<number>();
@@ -20,6 +22,10 @@ export class CounterComponent implements OnInit {
 
   ngOnChanges(): void {
     this.count = this.startCount;
+  }
+
+  get randomNumber() {
+    return Math.random();
   }
 
   increment(): void {

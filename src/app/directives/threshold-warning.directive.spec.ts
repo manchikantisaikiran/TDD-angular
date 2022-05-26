@@ -23,6 +23,9 @@ describe('ThresholdWarningDirective', () => {
 
   it('adds the class if the number is over the threshold', () => {
     setFieldValue(fixture, 'input', '11');
+  //   const event = document.createEvent('Event');
+  // event.initEvent(type, bubbles, false);
+  // element.dispatchEvent(event);
     fixture.detectChanges();
     expect(input.classList.contains('overThreshold')).toBe(true);
   });

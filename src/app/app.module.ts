@@ -18,6 +18,7 @@ import { AppPaginateDirective } from './directives/app-paginate.directive';
 import { TranslatePipe } from './pipes/transalte.pipe';
 import { TranslateComponent } from './components/translate/translate.component';
 import { TranslateService } from './services/translate.service';
+import { NoAccessComponent } from './no-access/no-access.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { TranslateService } from './services/translate.service';
     AppPaginateDirective,
     TranslatePipe,
     TranslateComponent,
+    NoAccessComponent,
     // SquarePipe
   ],
   imports: [
